@@ -14,7 +14,14 @@ namespace JpegMetadataUpdateDemo
         {
             Console.WriteLine("***** DEMO STARTS *****");
 
-            using(Process proc = new Process("<filename>"))
+            JpegMetadataUpdateLib.Task task = new JpegMetadataUpdateLib.Task();
+            JpegMetadataUpdateLib.MetadataField fld = new MetadataField();
+
+            fld.FieldQuery = "/JPEGFileInterchangeFormat/Version";
+
+            task.AddMetadataFieldToQuery(fld);
+
+            using(Process proc = new Process(args[0], task))
             {
                 Console.WriteLine("Start processing image {0}", proc.Filename);
                 Console.WriteLine("End processing image {0}", proc.Filename);
