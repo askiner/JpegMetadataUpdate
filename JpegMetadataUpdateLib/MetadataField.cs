@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace JpegMetadataUpdateLib
 {
+    public enum MetaHeaders { EXIF, IPTC, XMP };
+
     public class MetadataField
     {
         public string Header { get; set; }
