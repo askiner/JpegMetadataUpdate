@@ -15,9 +15,11 @@ namespace JpegMetadataUpdateDemo
             Console.WriteLine("***** DEMO STARTS *****");
 
             JpegMetadataUpdateLib.Task task = new JpegMetadataUpdateLib.Task();
-            JpegMetadataUpdateLib.MetadataField fld = new MetadataField();
+            JpegMetadataUpdateLib.IMetadataField fld = MetadataFieldFactory.Create(HeaderType.IPTC, "Record value");
 
-            fld.FieldQuery = "/JPEGFileInterchangeFormat/Version";
+            //Record Version
+
+            //fld.FieldQuery = "/app13/irb/8bimiptc/iptc/Caption";
 
             task.AddMetadataFieldToQuery(fld);
 
