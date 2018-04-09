@@ -8,6 +8,9 @@ namespace JpegMetadataUpdateLib
 {
     public interface IMetadataField
     {
-        //bool Supported(string name);
+        //string Name { get; set; }
+        //byte[] Value { get; set; }
+        //string FieldQuery { get; set; }
+        //bool ReadOnly { get; }
     }
 }

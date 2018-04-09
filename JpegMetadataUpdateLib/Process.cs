@@ -42,13 +42,13 @@ namespace JpegMetadataUpdateLib
                 {
                     foreach (MetadataField fld in task.Queries)
                     {
-                        if (bitmapMetadata.ContainsQuery(fld.FieldQuery))
+                        if (bitmapMetadata.ContainsQuery(fld.Query))
                         {
-                            object o = bitmapMetadata.GetQuery(fld.FieldQuery);
+                            object o = bitmapMetadata.GetQuery(fld.Query);
 
                             if (o != null)
                             {
-                                fld.ValueString = o as string;
+                                //fld.ValueString = o as string;
                             }
                         }
 
